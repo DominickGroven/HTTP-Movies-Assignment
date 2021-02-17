@@ -5,7 +5,7 @@ function SavedList({ list }) {
   return (
     <div className="saved-list">
       <h3>Saved Movies:</h3>
-      {list.map(movie => {
+      {list.map((movie) => {
         return (
           <NavLink
             to={`/movies/${movie.id}`}
@@ -14,13 +14,16 @@ function SavedList({ list }) {
           >
             <span className="saved-movie">{movie.title}</span>
           </NavLink>
-        );
+        )
       })}
       <div className="home-button">
         <Link to="/">Home</Link>
       </div>
+      <div className="home-button">
+        <Link to="/add-movie">Add Movie</Link>
+      </div>
     </div>
-  );
+  )
 }
 
 export default SavedList;
